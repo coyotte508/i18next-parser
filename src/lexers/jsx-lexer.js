@@ -40,7 +40,7 @@ export default class JsxLexer extends HTMLLexer {
     const selfClosingTagPattern = '(?:<Trans([^>]*\\s' + this.attr + '[^>]*?)>((?:\\s|.)*?)<\\/Trans>)'
     const regex = new RegExp(
       [closingTagPattern, selfClosingTagPattern].join('|'),
-      'gi'
+      'g'
     )
 
     while (matches = regex.exec(content)) {
